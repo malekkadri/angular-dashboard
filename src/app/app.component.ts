@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
+import { NavbarComponent } from './navbar/navbar.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { FooterComponent } from './footer/footer.component';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.scss'],
+  standalone: true,
+  imports: [NavbarComponent, SidebarComponent, FooterComponent, RouterOutlet]
 })
-export class AppComponent {
-  title = 'angular-dashboard-generator';
-}
+export class AppComponent { }
